@@ -14,6 +14,12 @@ The game uses only Python's standard library, so no installation step is require
 python game.py
 ```
 
+Once installed from PyPI, you can also launch it with:
+
+```bash
+bread-bair
+```
+
 Choose a numbered action when prompted. At any time, enter:
 
 - `i` to inspect your satchel

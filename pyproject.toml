@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bread-bair"
+version = "0.1.0"
+description = "A fantasy text adventure about rescuing a baker's missing apprentice."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Devansh Lath" },
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Games/Entertainment :: Adventure",
+]
+
+[project.urls]
+Homepage = "https://github.com/DevanshLath/bread-bair"
+Repository = "https://github.com/DevanshLath/bread-bair"
+
+[project.scripts]
+bread-bair = "game:play"
+
+[tool.setuptools]
+py-modules = ["game"]
