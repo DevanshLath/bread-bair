@@ -26,12 +26,12 @@ ROOMS = {
     "crossroads": (
         "The Crossroads",
         "A saint's statue watches over four paths. A cold wind carries the smell "
-        "of rain, bread, and something older beneath the earth.",
+        "of rain, fresh bread, and something older beneath the earth.",
     ),
     "village": (
         "Morrowfen Village",
         "A handful of cottages crouch behind a crooked palisade. The baker is "
-        "still awake, and an unlit lantern hangs beside her door.",
+        "still awake, waiting for word of Bair, her missing apprentice.",
     ),
     "thicket": (
         "The Woven Thicket",
@@ -168,7 +168,7 @@ def take_action(state: GameState, action: str) -> None:
         state.inventory.remove("flour")
         state.lantern_lit = True
         state.score += 2
-        state.message = "The baker gives you a brass lantern, already filled with oil."
+        state.message = "The baker gives you a brass lantern and begs you to bring Bair home."
     elif action == "lantern":
         state.lantern_lit = True
         state.score += 1
@@ -238,8 +238,9 @@ def print_help() -> None:
 def play() -> None:
     state = GameState()
     random.shuffle(STARTING_PATHS)
-    print("The Last Lantern: A Text Adventure")
-    print("Find the Amber Tear before the third sunrise. The forest remembers what you do.")
+    print("Bread & Bair: A Text Adventure")
+    print("Bair, the village baker's apprentice, followed strange lights into the forest.")
+    print("Bring Bair home before the third sunrise. The forest remembers what you do.")
 
     while state.status == "playing":
         if state.time_left <= 0:
@@ -269,10 +270,11 @@ def play() -> None:
 
     if state.status == "true_end":
         print("\nThe Amber Tear and Moonstone awaken the star arch.")
-        print("Dawn breaks across Morrowfen. You saved the forest and became its new guardian.")
+        print("Bair steps through the light, flour-dusted and smiling. Dawn breaks across Morrowfen.")
+        print("You saved the forest and brought the baker's apprentice safely home.")
     elif state.status == "good_end":
-        print("\nYou acquired the Amber Tear and survived the trial of the woods.")
-        print("The forest shall remember your name.")
+        print("\nThe Amber Tear lights a safe path through the woods, and you find Bair waiting at its edge.")
+        print("The bakery hearth is warm again before sunrise.")
     else:
         print("\nThe third sun rises. The woods have claimed you.")
     print(f"Final score: {state.score}")

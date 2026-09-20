@@ -1,6 +1,6 @@
-# The Last Lantern
+# Bread & Bair
 
-**The Last Lantern** is a small, terminal-based fantasy text adventure written in Python. Explore the haunted paths around Morrowfen, collect what you need before the third sunrise, and choose whether to escape the forest -- or become its guardian.
+**Bread & Bair** is a small, terminal-based fantasy text adventure written in Python. Bair, the village baker's apprentice, has followed strange lights into the haunted paths around Morrowfen. Explore the forest, collect what you need before the third sunrise, and bring Bair safely home.
 
 ## Requirements
 
@@ -26,7 +26,7 @@ You begin with 24 hours and a small satchel. Your actions and occasional random 
 
 There are two successful endings:
 
-- Escape with the Amber Tear.
+- Find the Amber Tear to light a safe path back to Bair.
 - Find both the Amber Tear and Moonstone, then use them at the star arch for the true ending.
 
 Careful exploration matters: several locations, discoveries, and items unlock new choices.
